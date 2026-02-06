@@ -288,7 +288,7 @@ header h1 {
 }
 
 .performance-schedule li:before {
-    content: "🎭";
+    content: "\1F3AD";
     position: absolute;
     left: 0;
 }
@@ -366,7 +366,16 @@ header h1 {
 }
 
 .food-image-placeholder:before {
-    content: "🍽️";
+    content: "\1F37D\FE0F";
+}
+
+/* Food image (individual photo) */
+.food-image {
+    width: 100%;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid var(--accent-color);
 }
 
 .food-info {
