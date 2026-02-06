@@ -641,20 +641,14 @@ header {
     line-height: 1.4;
 }
 
-/* Prices: hidden by default, shown when body has .show-prices */
 .food-price {
-    display: none;
+    display: inline;
     font-weight: 600;
     color: var(--accent-color);
     font-size: 0.95em;
 }
 
-body.show-prices .food-price {
-    display: inline;
-}
-
-/* When prices are shown, put them after the item name */
-body.show-prices .food-info strong {
+.food-info strong {
     display: inline;
     margin-right: 6px;
 }
