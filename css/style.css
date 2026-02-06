@@ -383,6 +383,32 @@ header h1 {
     margin-bottom: 4px;
 }
 
+/* Food description text */
+.food-desc {
+    display: block;
+    font-size: 0.9em;
+    color: var(--text-light);
+    line-height: 1.4;
+}
+
+/* Prices: hidden by default, shown when body has .show-prices */
+.food-price {
+    display: none;
+    font-weight: 600;
+    color: var(--accent-color);
+    font-size: 0.95em;
+}
+
+body.show-prices .food-price {
+    display: inline;
+}
+
+/* When prices are shown, put them after the item name */
+body.show-prices .food-info strong {
+    display: inline;
+    margin-right: 6px;
+}
+
 .food-link-section {
     text-align: center;
     margin-top: 40px;
