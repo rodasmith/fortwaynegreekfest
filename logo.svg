@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="80" height="80">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#FFFFFF" stroke="#1a472a" stroke-width="3"/>
+
+  <!-- Greek key pattern border -->
+  <g stroke="#1a472a" stroke-width="2" fill="none">
+    <!-- Top left corner -->
+    <rect x="15" y="15" width="20" height="20"/>
+    <rect x="25" y="15" width="10" height="10"/>
+    <rect x="25" y="25" width="10" height="10"/>
+    <!-- Top right corner (mirrored) -->
+    <rect x="165" y="15" width="20" height="20"/>
+    <rect x="165" y="15" width="10" height="10"/>
+    <rect x="165" y="25" width="10" height="10"/>
+  </g>
+
+  <!-- Central Greek column design -->
+  <g fill="#1a472a">
+    <!-- Column shaft -->
+    <rect x="80" y="50" width="40" height="80" fill="none" stroke="#1a472a" stroke-width="2"/>
+
+    <!-- Fluting on column -->
+    <line x1="85" y1="50" x2="85" y2="130" stroke="#1a472a" stroke-width="1.5"/>
+    <line x1="90" y1="50" x2="90" y2="130" stroke="#1a472a" stroke-width="1.5"/>
+    <line x1="95" y1="50" x2="95" y2="130" stroke="#1a472a" stroke-width="1.5"/>
+    <line x1="105" y1="50" x2="105" y2="130" stroke="#1a472a" stroke-width="1.5"/>
+    <line x1="110" y1="50" x2="110" y2="130" stroke="#1a472a" stroke-width="1.5"/>
+    <line x1="115" y1="50" x2="115" y2="130" stroke="#1a472a" stroke-width="1.5"/>
+
+    <!-- Capital (top of column) -->
+    <rect x="75" y="45" width="50" height="8" fill="#1a472a"/>
+    <polygon points="75,45 70,40 130,40 125,45" fill="#1a472a"/>
+
+    <!-- Base (bottom of column) -->
+    <rect x="75" y="130" width="50" height="8" fill="#1a472a"/>
+    <polygon points="75,138 70,143 130,143 125,138" fill="#1a472a"/>
+  </g>
+
+  <!-- Text below -->
+  <text x="100" y="160" font-family="Georgia, serif" font-size="18" font-weight="bold" fill="#1a472a" text-anchor="middle">FW</text>
+  <text x="100" y="178" font-family="Georgia, serif" font-size="10" fill="#1a472a" text-anchor="middle">Greek Fest</text>
+</svg>

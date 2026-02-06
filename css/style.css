@@ -1,0 +1,712 @@
+/* ===================================
+   Fort Wayne Greek Festival Website
+   ==================================== */
+
+:root {
+    --primary-color: #003087;      /* Deep blue */
+    --secondary-color: #FFFFFF;    /* White */
+    --accent-color: #DC143C;       /* Crimson red */
+    --light-blue: #E8F0FE;         /* Light blue background */
+    --text-dark: #333333;
+    --text-light: #666666;
+    --border-light: #DDDDDD;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #FAFAFA;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== Header ===== */
+header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #004BAE 100%);
+    color: var(--secondary-color);
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    font-size: 1.3em;
+    font-style: italic;
+    color: #FFD700;
+    opacity: 0.95;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+}
+
+/* ===== Navigation ===== */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+}
+
+.nav-links a:hover {
+    color: #FFD700;
+    border-bottom: 2px solid #FFD700;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    background: linear-gradient(to bottom, var(--light-blue) 0%, var(--secondary-color) 100%);
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.hero-content h2 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.festival-date {
+    font-size: 2em;
+    color: var(--accent-color);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.festival-location {
+    font-size: 1.2em;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 1.1em;
+    color: var(--text-dark);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ===== About Section ===== */
+.about {
+    padding: 60px 0;
+    background-color: var(--secondary-color);
+}
+
+.about h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.2em;
+    margin-bottom: 40px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: var(--text-dark);
+    line-height: 1.8;
+    font-size: 1.05em;
+}
+
+.info-box {
+    background-color: var(--light-blue);
+    padding: 25px;
+    border-left: 4px solid var(--accent-color);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.info-box h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.info-box p {
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+.info-box a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.info-box a:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== Schedule Section ===== */
+.schedule {
+    padding: 60px 0;
+    background-color: var(--light-blue);
+}
+
+.schedule h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.2em;
+    margin-bottom: 40px;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.schedule-item {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--primary-color);
+    text-align: center;
+}
+
+.schedule-item h3 {
+    color: var(--primary-color);
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+
+.time {
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    font-size: 1.05em;
+}
+
+.admission {
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.schedule-item p {
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+.performance-schedule {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--accent-color);
+}
+
+.performance-schedule h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.performance-schedule p {
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.performance-schedule ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.performance-schedule li {
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.performance-schedule li:before {
+    content: "🎭";
+    position: absolute;
+    left: 0;
+}
+
+/* ===== Food Section ===== */
+.food {
+    padding: 60px 0;
+    background-color: var(--secondary-color);
+}
+
+.food h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+.section-intro {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.1em;
+    margin-bottom: 40px;
+}
+
+.food-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.food-category {
+    background-color: var(--light-blue);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.food-category h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+}
+
+.food-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.food-item {
+    background-color: var(--secondary-color);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.food-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.food-image-placeholder {
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(135deg, #E8F0FE 0%, #D4E3F7 100%);
+    border-bottom: 2px solid var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    color: var(--primary-color);
+}
+
+.food-image-placeholder:before {
+    content: "🍽️";
+}
+
+.food-info {
+    padding: 12px;
+    font-size: 0.9em;
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+.food-info strong {
+    color: var(--primary-color);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.food-link-section {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid var(--border-light);
+}
+
+.food-link-section p {
+    color: var(--text-dark);
+    font-size: 1.1em;
+}
+
+.waiter-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.waiter-link:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* ===== Entertainment Section ===== */
+.entertainment {
+    padding: 60px 0;
+    background-color: var(--light-blue);
+}
+
+.entertainment h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+.entertainment-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.entertainment-item {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--accent-color);
+}
+
+.entertainment-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.entertainment-item p {
+    color: var(--text-dark);
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.entertainment-item strong {
+    color: var(--accent-color);
+}
+
+/* ===== Sponsors Section ===== */
+.sponsors {
+    padding: 60px 0;
+    background-color: var(--secondary-color);
+}
+
+.sponsors h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+.sponsor-logos-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+    background-color: var(--light-blue);
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.sponsor-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+.sponsor-image {
+    width: 120px;
+    height: 80px;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.sponsor-logo:hover .sponsor-image {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+.sponsor-contact-message {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px solid var(--border-light);
+}
+
+.sponsor-contact-message p {
+    color: var(--text-dark);
+    font-size: 1.05em;
+    margin-bottom: 12px;
+}
+
+.sponsor-contact-message a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.sponsor-contact-message a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.no-sponsors-message {
+    text-align: center;
+    margin-top: 40px;
+    padding: 40px;
+    background-color: var(--light-blue);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.no-sponsors-message p {
+    color: var(--text-dark);
+    font-size: 1.05em;
+    margin-bottom: 15px;
+}
+
+.no-sponsors-message a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.no-sponsors-message a:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
+}
+
+/* ===== Contact Section ===== */
+.contact {
+    padding: 60px 0;
+    background-color: var(--light-blue);
+}
+
+.contact h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.2em;
+    margin-bottom: 40px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.contact-item {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.contact-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.contact-item p {
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.contact-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-item a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.map-placeholder {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #004BAE 100%);
+    color: var(--secondary-color);
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 60px;
+}
+
+footer p {
+    margin: 8px 0;
+    font-size: 1em;
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .tagline {
+        font-size: 1.1em;
+    }
+
+    .nav-links {
+        gap: 15px;
+        font-size: 0.9em;
+    }
+
+    .hero-content h2 {
+        font-size: 1.8em;
+    }
+
+    .festival-date {
+        font-size: 1.4em;
+    }
+
+    .section-intro {
+        font-size: 1em;
+    }
+
+    .food-categories {
+        grid-template-columns: 1fr;
+    }
+
+    .food-items {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .entertainment-content {
+        grid-template-columns: 1fr;
+    }
+
+    .sponsor-logos-cloud {
+        gap: 20px;
+    }
+
+    .sponsor-logo {
+        height: 80px;
+    }
+
+    .sponsor-image {
+        max-width: 120px;
+        max-height: 80px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-content h2 {
+        font-size: 1.4em;
+    }
+
+    .festival-date {
+        font-size: 1.1em;
+    }
+
+    .schedule-item,
+    .food-category,
+    .contact-item {
+        padding: 20px;
+    }
+}
