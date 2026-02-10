@@ -511,6 +511,10 @@ body.show-prices .food-info strong {
     margin-bottom: 1rem;
 }
 
+.live-music .entertainment-image {
+    object-position: top center;
+}
+
 .section-intro {
     text-align: center;
     font-size: 1.1rem;
@@ -571,6 +575,12 @@ body.show-prices .food-info strong {
 
 .social-link a:hover {
     text-decoration: underline;
+}
+
+/* Band schedule placeholder — no background image accent */
+.band-schedule {
+    background-image: none;
+    background-color: rgba(240, 240, 240, 0.55);
 }
 
 .info-pending {
