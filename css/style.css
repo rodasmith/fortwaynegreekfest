@@ -446,6 +446,23 @@ body.show-prices .food-info strong {
 .entertainment {
     padding: 60px 0;
     background-color: var(--light-blue);
+    background-image: url('../images/triada_performing.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.entertainment::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(232, 240, 254, 0.88);
+    z-index: 0;
+}
+
+.entertainment .container {
+    position: relative;
+    z-index: 1;
 }
 
 .entertainment h2 {
@@ -527,7 +544,28 @@ body.show-prices .food-info strong {
     margin: 1.5rem 0;
     padding: 1.5rem;
     background-color: #f0f7ff;
+    background-image: url('../images/triada_young_dancer.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-blend-mode: soft-light;
     border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.performance-info::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(240, 247, 255, 0.85);
+    border-radius: 6px;
+    z-index: 0;
+}
+
+.performance-info > * {
+    position: relative;
+    z-index: 1;
 }
 
 .performance-info h4 {
