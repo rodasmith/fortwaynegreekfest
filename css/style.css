@@ -543,29 +543,13 @@ body.show-prices .food-info strong {
     gap: 2rem;
     margin: 1.5rem 0;
     padding: 1.5rem;
-    background-color: #f0f7ff;
+    background-color: rgba(240, 240, 240, 0.55);
     background-image: url('../images/triada_young_dancer.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right center;
     background-blend-mode: soft-light;
     border-radius: 6px;
-    position: relative;
-    overflow: hidden;
-}
-
-.performance-info::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(240, 247, 255, 0.85);
-    border-radius: 6px;
-    z-index: 0;
-}
-
-.performance-info > * {
-    position: relative;
-    z-index: 1;
 }
 
 .performance-info h4 {
