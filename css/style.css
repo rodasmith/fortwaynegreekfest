@@ -293,6 +293,33 @@ header h1 {
     left: 0;
 }
 
+/* ===== Price Toggle ===== */
+.price-toggle-wrapper {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.price-toggle-btn {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.95em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.price-toggle-btn:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+body.show-prices .price-toggle-btn {
+    background-color: var(--accent-color);
+}
+
 /* ===== Food Section ===== */
 .food {
     padding: 60px 0;
