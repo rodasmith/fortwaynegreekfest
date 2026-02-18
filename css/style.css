@@ -3,7 +3,7 @@
    ==================================== */
 
 :root {
-    --primary-color: #003087;      /* Deep blue */
+    --primary-color: #0A1429 ;      /* Deep blue */
     --secondary-color: #FFFFFF;    /* White */
     --accent-color: #DC143C;       /* Crimson red */
     --light-blue: #E8F0FE;         /* Light blue background */
@@ -34,18 +34,82 @@ body {
 
 /* ===== Header ===== */
 header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #004BAE 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, hsl(219, 61%, 20%)   100%);
     color: var(--secondary-color);
-    padding: 40px 0;
+    padding: 1px 0;
     text-align: center;
     box-shadow: var(--shadow);
 }
 
-header h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
+.site-header {
+    position: relative;
+    height: 180px;
+
+    /* Gradient background based on Color: Greek Flag Blue - #185FAB, 
+        darkened for better text visibility over the logo image */
+    background: linear-gradient(
+        135deg,
+        hsl(209, 75%, 22%) 0%,
+        hsl(209, 75%, 18%) 40%,
+        hsl(209, 75%, 28%) 100%
+    );
+}
+
+.header-overlay {
+    position: absolute;
+    inset: 0;
+
+    background-image: url('../images/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* key change */
+    align-items: center;
+
+    padding: 12px 0; /* gives breathing room */
+}
+
+.festival-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-variant: small-caps;
     font-weight: 700;
+    text-transform: uppercase;
+
+    color: white;
+    margin: 0;
+    padding: 0;
+
+    line-height: 1.05;
     letter-spacing: 1px;
+
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.festival-heading .line-small {
+    font-size: 0.9rem;   /* reduced to match logo proportions */
+    opacity: 0.9;        /* slightly softer */
+}
+
+.festival-heading .line-large {
+    font-size: 1.4rem;   /* stronger, like the logo */
+}
+
+.festival-heading span {
+    display: block;
+    font-size: 1.4rem; /* adjust as needed */
+}
+
+.site-header h1,
+.site-header .tagline {
+    margin: 0;
+    color: hsl(209, 75%, 90%)
 }
 
 .tagline {
