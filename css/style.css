@@ -3,7 +3,7 @@
    ==================================== */
 
 :root {
-    --primary-color: #003087;      /* Deep blue */
+    --primary-color: #0A1429 ;      /* Deep blue */
     --secondary-color: #FFFFFF;    /* White */
     --accent-color: #DC143C;       /* Crimson red */
     --light-blue: #E8F0FE;         /* Light blue background */
@@ -34,25 +34,35 @@ body {
 
 /* ===== Header ===== */
 header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #004BAE 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, hsl(219, 61%, 20%)   100%);
     color: var(--secondary-color);
-    padding: 40px 0;
+    padding: 1px 0;
     text-align: center;
     box-shadow: var(--shadow);
 }
 
-header h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
+.site-header {
+    position: relative;
+    height: 140px;
+
+    /* Gradient background based on Color: Greek Flag Blue - #185FAB, 
+        darkened for better text visibility over the logo image */
+    background: linear-gradient(
+        135deg,
+        hsl(209, 75%, 22%) 0%,
+        hsl(209, 75%, 18%) 40%,
+        hsl(209, 75%, 28%) 100%
+    );
 }
 
-.tagline {
-    font-size: 1.3em;
-    font-style: italic;
-    color: #FFD700;
-    opacity: 0.95;
+.header-overlay {
+    position: absolute;
+    inset: 0;
+
+    background-image: url('../images/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 .header-content {
@@ -116,6 +126,13 @@ header h1 {
     font-size: 2.5em;
     color: var(--primary-color);
     margin-bottom: 15px;
+}
+
+.hero-tagline {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #9B1B30;
+    margin-bottom: 12px;
 }
 
 .festival-date {
@@ -776,14 +793,22 @@ footer a:hover {
     text-decoration: underline;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 /* ===== Responsive Design ===== */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
-    }
-
-    .tagline {
-        font-size: 1.1em;
+    .site-header {
+        height: 100px;
     }
 
     .nav-links {
@@ -793,6 +818,10 @@ footer a:hover {
 
     .hero-content h2 {
         font-size: 1.8em;
+    }
+
+    .hero-tagline {
+        font-size: 1.05em;
     }
 
     .festival-date {
@@ -834,10 +863,6 @@ footer a:hover {
 }
 
 @media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5em;
-    }
-
     .nav-links {
         flex-direction: column;
         gap: 10px;
