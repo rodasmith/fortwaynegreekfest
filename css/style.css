@@ -2,6 +2,30 @@
    Fort Wayne Greek Festival Website
    ==================================== */
 
+   /* --- Custom Fonts from Design Recommendation --- */
+
+@font-face {
+    font-family: 'Insignia';
+    src: url('fonts/Insignia Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lithos';
+    src: url('fonts/lithos.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aspira';
+    src: url('fonts/Aspira-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 :root {
     --primary-color: #0A1429 ;      /* Deep blue */
     --secondary-color: #FFFFFF;    /* White */
@@ -11,6 +35,9 @@
     --text-light: #666666;
     --border-light: #DDDDDD;
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --primary-blue: #185FAA; 
+    --accent-blue: #178FD6; /* New replacement for red */
+    --light-bg: #EDECE8;
 }
 
 * {
@@ -19,8 +46,64 @@
     box-sizing: border-box;
 }
 
+/* --- Applying the Brand Style --- */
+
+h1, h2, h3, .nav-link {
+    font-family: 'Lithos', sans-serif; /* Gives that "Greek" feel Kaleena mentioned */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1, .display-4 {
+    font-family: 'Insignia', sans-serif;
+    text-transform: uppercase;
+}
+
+h2, h3, .nav-link {
+    font-family: 'Lithos', sans-serif;
+    text-transform: uppercase;
+}
+
+/* Update these in your style.css */
+
+.main-title {
+    font-family: 'Insignia', sans-serif;
+    font-size: 4rem; /* Significantly larger */
+    text-transform: uppercase;
+    margin-bottom: 0;
+    line-height: 0.9;
+    color: var(--primary-blue);
+}
+
+.main-title .location {
+    display: block; /* Puts Fort Wayne on a new line as per mockup */
+    font-size: 2.5rem; 
+}
+
+.sub-title {
+    font-family: 'Lithos', sans-serif;
+    font-size: 1.75rem; /* Smaller than the H1 */
+    font-weight: bold;
+    color: var(--accent-blue); /* That lighter blue from the mockup */
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
+.hero-tagline {
+    font-family: 'Aspira', sans-serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+.navbar-brand img {
+    height: 80px; /* Adjust based on Kaleena's larger logo preference */
+    width: auto;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Aspira', sans-serif; /* Clean, modern body text */
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     line-height: 1.6;
     color: var(--text-dark);
     background-color: #FAFAFA;
@@ -59,7 +142,7 @@ header {
     position: absolute;
     inset: 0;
 
-    background-image: url('../images/logo.png');
+    background-image: url('../images/Logo-09_White.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
