@@ -184,15 +184,15 @@ header {
 
 /* ===== Navigation ===== */
 .navbar {
-    background-color: var(--greek-flag-blue) !important; /* #185FAA */
-    border-bottom: none;
+    background-color: var(--greek-flag-blue) !important; /* HEX #185FAA */
+    padding: 1.2rem 0; /* Make it a bit beefier */
 }
 
 .nav-link {
     font-family: 'Lithos', sans-serif;
     text-transform: uppercase;
     color: #FFFFFF !important;
-    font-size: 0.95rem;
+    font-weight: bold;
     letter-spacing: 1.5px;
 }
 
@@ -238,15 +238,14 @@ header {
 }
 
 .main-title {
-    font-family: 'Insignia', sans-serif; /* Use Insignia here */
-    color: var(--text-navy); /* #034488 */
-    font-size: 5.5rem;
+    font-family: 'Insignia', sans-serif; /* Swap Lithos for Insignia */
+    color: var(--text-navy); /* HEX #034488 */
+    font-size: 5rem;
     line-height: 0.8;
-    margin-bottom: 5px;
 }
 
 .main-title .location {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .sub-title {
@@ -257,10 +256,10 @@ header {
 }
 
 .festival-date {
-    color: var(--accent-blue); /* #178FD6 - replacing the red */
+    color: var(--accent-blue); /* HEX #178FD6 */
     font-family: 'Lithos', sans-serif;
-    font-weight: bold;
     font-size: 2.2rem;
+    font-weight: bold;
 }
 
 /* The horizontal lines around the tagline */
