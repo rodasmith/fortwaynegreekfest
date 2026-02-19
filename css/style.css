@@ -36,8 +36,11 @@
     --border-light: #DDDDDD;
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     --primary-blue: #185FAA; 
-    --accent-blue: #178FD6; /* New replacement for red */
-    --light-bg: #EDECE8;
+    --greek-flag-blue: #185FAA;
+    --text-navy: #034488;  /* Use for main headers */
+    --accent-blue: #178FD6; /* Use for "46th Annual..." and red replacements */
+    --light-bg: #EDECE8;    /* The light gray background */
+    --dark-text: #262426;   /* Body text color */
 }
 
 * {
@@ -75,25 +78,38 @@ h2, h3, .nav-link {
     color: var(--primary-blue);
 }
 
+/* Typography Hierarchy */
+.main-title {
+    font-family: 'Insignia', sans-serif;
+    font-size: 5rem;
+    line-height: 0.85;
+    text-transform: uppercase;
+    color: #FFFFFF; /* White text on blue hero bg */
+    margin-bottom: 0.5rem;
+}
+
 .main-title .location {
-    display: block; /* Puts Fort Wayne on a new line as per mockup */
-    font-size: 2.5rem; 
+    font-size: 3rem;
+    display: block;
 }
 
 .sub-title {
     font-family: 'Lithos', sans-serif;
-    font-size: 1.75rem; /* Smaller than the H1 */
-    font-weight: bold;
-    color: var(--accent-blue); /* That lighter blue from the mockup */
+    font-size: 2rem;
+    color: #178FD6; /* Kaleena's accent blue */
     text-transform: uppercase;
-    margin-top: 0.5rem;
+    margin-top: 0;
 }
 
 .hero-tagline {
     font-family: 'Aspira', sans-serif;
     font-style: italic;
-    font-size: 1.2rem;
-    margin-top: 2rem;
+    font-size: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    display: inline-block;
+    padding: 10px 0;
+    margin: 20px 0;
 }
 
 .navbar-brand img {
@@ -168,12 +184,26 @@ header {
 
 /* ===== Navigation ===== */
 .navbar {
-    background-color: var(--primary-color);
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: var(--shadow);
+    background-color: var(--greek-flag-blue) !important; /* HEX #185FAA */
+    padding: 1.2rem 0; /* Make it a bit beefier */
+}
+
+.nav-link {
+    font-family: 'Lithos', sans-serif;
+    text-transform: uppercase;
+    color: #FFFFFF !important;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.nav-link:hover {
+    color: var(--accent-blue) !important;
+}
+
+/* Make the logo stand out */
+.navbar-brand img {
+    height: 90px; /* Larger, as seen in mockup */
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.2));
 }
 
 .nav-links {
@@ -199,23 +229,97 @@ header {
 
 /* ===== Hero Section ===== */
 .hero {
-    background: linear-gradient(to bottom, var(--light-blue) 0%, var(--secondary-color) 100%);
+    background-color: var(--light-bg); /* Match the mockup's light background */
     padding: 60px 0;
-    text-align: center;
-    border-bottom: 3px solid var(--primary-color);
+}
+.hero-content {
+    text-align: center; /* Mockup shows centered text */
+    padding: 40px 0;
+}
+
+.main-title {
+    font-family: 'Insignia', sans-serif; /* Swap Lithos for Insignia */
+    color: var(--text-navy); /* HEX #034488 */
+    font-size: 5rem;
+    line-height: 0.8;
+}
+
+.main-title .location {
+    font-size: 2.5rem;
+}
+
+.sub-title {
+    font-family: 'Lithos', sans-serif; /* Use Lithos here */
+    color: var(--text-navy);
+    font-size: 3.5rem;
+    margin-top: 0;
+}
+
+.festival-date {
+    color: var(--accent-blue); /* HEX #178FD6 */
+    font-family: 'Lithos', sans-serif;
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+/* The horizontal lines around the tagline */
+.hero-tagline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Aspira', sans-serif;
+    text-transform: uppercase;
+    color: var(--accent-blue);
+    font-weight: bold;
+    font-style: normal; /* Mockup actually uses clean caps, not italics */
+}
+
+.hero-tagline::before,
+.hero-tagline::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--accent-blue);
+    max-width: 100px;
+    margin: 0 20px;
+}
+
+.main-title {
+    font-family: 'Insignia', sans-serif;
+    color: var(--text-navy);
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.main-title .location {
+    font-size: 2.2rem; /* Smaller "Fort Wayne" */
+    display: block;
+    margin-top: -5px;
+}
+
+.sub-title {
+    font-family: 'Lithos', sans-serif;
+    color: var(--text-navy);
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.hero-tagline {
+    font-family: 'Lithos', sans-serif; /* Mockup uses a clean sans for this */
+    color: var(--accent-blue);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
 }
 
 .hero-content h2 {
     font-size: 2.5em;
     color: var(--primary-color);
     margin-bottom: 15px;
-}
-
-.hero-tagline {
-    font-size: 1.2em;
-    font-style: italic;
-    color: #9B1B30;
-    margin-bottom: 12px;
 }
 
 .festival-date {
@@ -842,6 +946,22 @@ body.show-prices .food-info strong {
 .contact-item a:hover {
     color: var(--accent-color);
     text-decoration: underline;
+}
+
+.church-contact-card {
+    background: #FFFFFF;
+    border-left: 5px solid var(--accent-blue);
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-radius: 4px;
+}
+
+.church-contact-card h3 {
+    font-family: 'Lithos', sans-serif;
+    color: var(--text-navy);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
 .map-placeholder {
