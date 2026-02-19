@@ -75,25 +75,38 @@ h2, h3, .nav-link {
     color: var(--primary-blue);
 }
 
+/* Typography Hierarchy */
+.main-title {
+    font-family: 'Insignia', sans-serif;
+    font-size: 5rem;
+    line-height: 0.85;
+    text-transform: uppercase;
+    color: #FFFFFF; /* White text on blue hero bg */
+    margin-bottom: 0.5rem;
+}
+
 .main-title .location {
-    display: block; /* Puts Fort Wayne on a new line as per mockup */
-    font-size: 2.5rem; 
+    font-size: 3rem;
+    display: block;
 }
 
 .sub-title {
     font-family: 'Lithos', sans-serif;
-    font-size: 1.75rem; /* Smaller than the H1 */
-    font-weight: bold;
-    color: var(--accent-blue); /* That lighter blue from the mockup */
+    font-size: 2rem;
+    color: #178FD6; /* Kaleena's accent blue */
     text-transform: uppercase;
-    margin-top: 0.5rem;
+    margin-top: 0;
 }
 
 .hero-tagline {
     font-family: 'Aspira', sans-serif;
     font-style: italic;
-    font-size: 1.2rem;
-    margin-top: 2rem;
+    font-size: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    display: inline-block;
+    padding: 10px 0;
+    margin: 20px 0;
 }
 
 .navbar-brand img {
