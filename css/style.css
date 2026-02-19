@@ -25,22 +25,18 @@
     font-style: normal;
 }
 
-
 :root {
-    --primary-color: #0A1429 ;      /* Deep blue */
+    --primary-color: #034488;      /* Navy blue */
     --secondary-color: #FFFFFF;    /* White */
-    --accent-color: #DC143C;       /* Crimson red */
+    --accent-color: #178FD6;       /* Accent blue */
     --light-blue: #E8F0FE;         /* Light blue background */
+    --hero-bg: #EDECE8;
+    --title-dark: #262426;
+    --brand-blue: #185FAA;
     --text-dark: #333333;
     --text-light: #666666;
     --border-light: #DDDDDD;
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    --primary-blue: #185FAA; 
-    --greek-flag-blue: #185FAA;
-    --text-navy: #034488;  /* Use for main headers */
-    --accent-blue: #178FD6; /* Use for "46th Annual..." and red replacements */
-    --light-bg: #EDECE8;    /* The light gray background */
-    --dark-text: #262426;   /* Body text color */
 }
 
 * {
@@ -49,77 +45,8 @@
     box-sizing: border-box;
 }
 
-/* --- Applying the Brand Style --- */
-
-h1, h2, h3, .nav-link {
-    font-family: 'Lithos', sans-serif; /* Gives that "Greek" feel Kaleena mentioned */
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-h1, .display-4 {
-    font-family: 'Insignia', sans-serif;
-    text-transform: uppercase;
-}
-
-h2, h3, .nav-link {
-    font-family: 'Lithos', sans-serif;
-    text-transform: uppercase;
-}
-
-/* Update these in your style.css */
-
-.main-title {
-    font-family: 'Insignia', sans-serif;
-    font-size: 4rem; /* Significantly larger */
-    text-transform: uppercase;
-    margin-bottom: 0;
-    line-height: 0.9;
-    color: var(--primary-blue);
-}
-
-/* Typography Hierarchy */
-.main-title {
-    font-family: 'Insignia', sans-serif;
-    font-size: 5rem;
-    line-height: 0.85;
-    text-transform: uppercase;
-    color: #FFFFFF; /* White text on blue hero bg */
-    margin-bottom: 0.5rem;
-}
-
-.main-title .location {
-    font-size: 3rem;
-    display: block;
-}
-
-.sub-title {
-    font-family: 'Lithos', sans-serif;
-    font-size: 2rem;
-    color: #178FD6; /* Kaleena's accent blue */
-    text-transform: uppercase;
-    margin-top: 0;
-}
-
-.hero-tagline {
-    font-family: 'Aspira', sans-serif;
-    font-style: italic;
-    font-size: 1.5rem;
-    border-top: 1px solid rgba(255,255,255,0.3);
-    border-bottom: 1px solid rgba(255,255,255,0.3);
-    display: inline-block;
-    padding: 10px 0;
-    margin: 20px 0;
-}
-
-.navbar-brand img {
-    height: 80px; /* Adjust based on Kaleena's larger logo preference */
-    width: auto;
-}
-
 body {
-    font-family: 'Aspira', sans-serif; /* Clean, modern body text */
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
     background-color: #FAFAFA;
@@ -142,15 +69,15 @@ header {
 
 .site-header {
     position: relative;
-    height: 140px;
+    height: 155px;
 
     /* Gradient background based on Color: Greek Flag Blue - #185FAB, 
         darkened for better text visibility over the logo image */
     background: linear-gradient(
         135deg,
-        hsl(209, 75%, 22%) 0%,
-        hsl(209, 75%, 18%) 40%,
-        hsl(209, 75%, 28%) 100%
+        hsl(209, 69%, 40%) 0%,
+        hsl(209, 69%, 34%) 45%,
+        hsl(209, 69%, 30%) 100%
     );
 }
 
@@ -161,7 +88,7 @@ header {
     background-image: url('../images/Logo-09_White.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: 140px;
 }
 
 .header-content {
@@ -184,26 +111,12 @@ header {
 
 /* ===== Navigation ===== */
 .navbar {
-    background-color: var(--greek-flag-blue) !important; /* HEX #185FAA */
-    padding: 1.2rem 0; /* Make it a bit beefier */
-}
-
-.nav-link {
-    font-family: 'Lithos', sans-serif;
-    text-transform: uppercase;
-    color: #FFFFFF !important;
-    font-weight: bold;
-    letter-spacing: 1.5px;
-}
-
-.nav-link:hover {
-    color: var(--accent-blue) !important;
-}
-
-/* Make the logo stand out */
-.navbar-brand img {
-    height: 90px; /* Larger, as seen in mockup */
-    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.2));
+    background-color: var(--primary-color);
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
 }
 
 .nav-links {
@@ -211,148 +124,122 @@ header {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 22px;
 }
 
 .nav-links a {
     color: var(--secondary-color);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 0.98rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
     transition: color 0.3s ease;
     padding: 5px 10px;
 }
 
 .nav-links a:hover {
-    color: #FFD700;
-    border-bottom: 2px solid #FFD700;
+    color: #EDECE8;
+    border-bottom: 2px solid #EDECE8;
 }
 
 /* ===== Hero Section ===== */
 .hero {
-    background-color: var(--light-bg); /* Match the mockup's light background */
-    padding: 60px 0;
-}
-.hero-content {
-    text-align: center; /* Mockup shows centered text */
-    padding: 40px 0;
+    background: var(--hero-bg);
+    padding: 64px 0 56px;
+    text-align: center;
+    border-bottom: 1px solid #d7d5cf;
 }
 
-.main-title {
-    font-family: 'Insignia', sans-serif; /* Swap Lithos for Insignia */
-    color: var(--text-navy); /* HEX #034488 */
-    font-size: 5rem;
-    line-height: 0.8;
+.hero-kicker {
+    color: var(--title-dark);
+    font-weight: 700;
+    font-size: clamp(2.4rem, 4.7vw, 3.8rem);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 2px;
 }
 
-.main-title .location {
-    font-size: 2.5rem;
+.hero-title {
+    font-size: clamp(2.2rem, 5.2vw, 4.9rem);
+    color: var(--title-dark);
+    margin-bottom: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 0.95;
 }
 
-.sub-title {
-    font-family: 'Lithos', sans-serif; /* Use Lithos here */
-    color: var(--text-navy);
-    font-size: 3.5rem;
-    margin-top: 0;
+.hero-title-line {
+    display: block;
 }
 
-.festival-date {
-    color: var(--accent-blue); /* HEX #178FD6 */
-    font-family: 'Lithos', sans-serif;
-    font-size: 2.2rem;
-    font-weight: bold;
+.hero-title-annual {
+    font-size: clamp(2.2rem, 4.8vw, 4.4rem);
 }
 
-/* The horizontal lines around the tagline */
+.hero-title-festival {
+    font-size: clamp(2.6rem, 5.7vw, 5.5rem);
+    letter-spacing: 0.05em;
+}
+
 .hero-tagline {
+    font-size: 1.12rem;
+    color: var(--primary-color);
+    margin: 0 auto 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    max-width: 920px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Aspira', sans-serif;
-    text-transform: uppercase;
-    color: var(--accent-blue);
-    font-weight: bold;
-    font-style: normal; /* Mockup actually uses clean caps, not italics */
+    gap: 14px;
 }
 
 .hero-tagline::before,
 .hero-tagline::after {
     content: "";
-    flex: 1;
+    width: 80px;
     height: 1px;
-    background: var(--accent-blue);
-    max-width: 100px;
-    margin: 0 20px;
-}
-
-.main-title {
-    font-family: 'Insignia', sans-serif;
-    color: var(--text-navy);
-    font-size: 4.5rem;
-    text-transform: uppercase;
-    line-height: 1;
-    margin-bottom: 0;
-}
-
-.main-title .location {
-    font-size: 2.2rem; /* Smaller "Fort Wayne" */
-    display: block;
-    margin-top: -5px;
-}
-
-.sub-title {
-    font-family: 'Lithos', sans-serif;
-    color: var(--text-navy);
-    font-size: 2.8rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.hero-tagline {
-    font-family: 'Lithos', sans-serif; /* Mockup uses a clean sans for this */
-    color: var(--accent-blue);
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-}
-
-.hero-content h2 {
-    font-size: 2.5em;
-    color: var(--primary-color);
-    margin-bottom: 15px;
+    background-color: rgba(3, 68, 136, 0.28);
 }
 
 .festival-date {
-    font-size: 2em;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
     color: var(--accent-color);
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 .festival-location {
-    font-size: 1.2em;
-    color: var(--text-light);
-    margin-bottom: 20px;
+    font-size: 1.05rem;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+    letter-spacing: 0.02em;
 }
 
 .hero-description {
-    font-size: 1.1em;
+    font-size: 1.04rem;
     color: var(--text-dark);
-    max-width: 600px;
+    max-width: 740px;
     margin: 0 auto;
-    line-height: 1.8;
+    line-height: 1.7;
 }
 
 /* ===== About Section ===== */
 .about {
     padding: 60px 0;
-    background-color: var(--secondary-color);
+    background-color: var(--hero-bg);
 }
 
 .about h2 {
     text-align: center;
     color: var(--primary-color);
-    font-size: 2.2em;
+    font-size: 2.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     margin-bottom: 40px;
 }
 
@@ -367,14 +254,14 @@ header {
     margin-bottom: 20px;
     color: var(--text-dark);
     line-height: 1.8;
-    font-size: 1.05em;
+    font-size: 1.02rem;
 }
 
 .info-box {
-    background-color: var(--light-blue);
+    background-color: var(--secondary-color);
     padding: 25px;
-    border-left: 4px solid var(--accent-color);
-    border-radius: 8px;
+    border-left: 3px solid var(--accent-color);
+    border-radius: 6px;
     box-shadow: var(--shadow);
 }
 
@@ -401,7 +288,42 @@ header {
     color: var(--accent-color);
 }
 
+
+@media (max-width: 900px) {
+    .hero-tagline::before,
+    .hero-tagline::after {
+        width: 46px;
+    }
+}
+
 @media (max-width: 768px) {
+    .site-header {
+        height: 130px;
+    }
+
+    .header-overlay {
+        background-size: 110px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 46px 0 42px;
+    }
+
+    .hero-tagline {
+        font-size: 0.92rem;
+        letter-spacing: 0.07em;
+        gap: 10px;
+    }
+
+    .hero-tagline::before,
+    .hero-tagline::after {
+        width: 30px;
+    }
+
     .about-content {
         grid-template-columns: 1fr;
     }
@@ -946,22 +868,6 @@ body.show-prices .food-info strong {
 .contact-item a:hover {
     color: var(--accent-color);
     text-decoration: underline;
-}
-
-.church-contact-card {
-    background: #FFFFFF;
-    border-left: 5px solid var(--accent-blue);
-    padding: 25px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    border-radius: 4px;
-}
-
-.church-contact-card h3 {
-    font-family: 'Lithos', sans-serif;
-    color: var(--text-navy);
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    margin-bottom: 15px;
 }
 
 .map-placeholder {
