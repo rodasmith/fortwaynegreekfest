@@ -81,16 +81,6 @@ header {
     );
 }
 
-.site-header::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 40px;
-    background-color: rgba(3, 68, 136, 0.45);
-}
-
 .header-overlay {
     position: absolute;
     inset: 0;
@@ -356,10 +346,11 @@ header {
 /* ===== Schedule Section ===== */
 .schedule {
     padding: 60px 0;
-    background-color: var(--light-blue);
+    background-color: var(--hero-bg);
 }
 
 .schedule h2 {
+    font-family: 'Lithos', 'Trebuchet MS', sans-serif;
     text-align: center;
     color: var(--primary-color);
     font-size: 2.2em;
@@ -374,7 +365,7 @@ header {
 }
 
 .schedule-item {
-    background-color: var(--secondary-color);
+    background-color: #f7f7f7;
     padding: 30px;
     border-radius: 8px;
     box-shadow: var(--shadow);
@@ -407,7 +398,7 @@ header {
 }
 
 .performance-schedule {
-    background-color: var(--secondary-color);
+    background-color: #f7f7f7;
     padding: 30px;
     border-radius: 8px;
     box-shadow: var(--shadow);
@@ -446,10 +437,11 @@ header {
 /* ===== Food Section ===== */
 .food {
     padding: 60px 0;
-    background-color: var(--secondary-color);
+    background-color: var(--hero-bg);
 }
 
 .food h2 {
+    font-family: 'Lithos', 'Trebuchet MS', sans-serif;
     text-align: center;
     color: var(--primary-color);
     font-size: 2.2em;
@@ -470,7 +462,7 @@ header {
 }
 
 .food-category {
-    background-color: var(--light-blue);
+    background-color: #f7f7f7;
     padding: 30px;
     border-radius: 8px;
     box-shadow: var(--shadow);
@@ -595,7 +587,7 @@ body.show-prices .food-info strong {
 /* ===== Entertainment Section ===== */
 .entertainment {
     padding: 60px 0;
-    background-color: var(--light-blue);
+    background-color: var(--hero-bg);
     background-image: url('../images/triada_performing.jpg');
     background-size: cover;
     background-position: center;
@@ -606,7 +598,7 @@ body.show-prices .food-info strong {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(232, 240, 254, 0.88);
+    background: rgba(237, 236, 232, 0.9);
     z-index: 0;
 }
 
@@ -616,6 +608,7 @@ body.show-prices .food-info strong {
 }
 
 .entertainment h2 {
+    font-family: 'Lithos', 'Trebuchet MS', sans-serif;
     text-align: center;
     color: var(--primary-color);
     font-size: 2.2em;
@@ -630,7 +623,7 @@ body.show-prices .food-info strong {
 }
 
 .entertainment-item {
-    background-color: var(--secondary-color);
+    background-color: #f7f7f7;
     padding: 30px;
     border-radius: 8px;
     box-shadow: var(--shadow);
@@ -846,10 +839,11 @@ body.show-prices .food-info strong {
 /* ===== Contact Section ===== */
 .contact {
     padding: 60px 0;
-    background-color: var(--light-blue);
+    background-color: var(--hero-bg);
 }
 
 .contact h2 {
+    font-family: 'Lithos', 'Trebuchet MS', sans-serif;
     text-align: center;
     color: var(--primary-color);
     font-size: 2.2em;
@@ -864,7 +858,7 @@ body.show-prices .food-info strong {
 }
 
 .contact-item {
-    background-color: var(--secondary-color);
+    background-color: #f7f7f7;
     padding: 30px;
     border-radius: 8px;
     box-shadow: var(--shadow);
