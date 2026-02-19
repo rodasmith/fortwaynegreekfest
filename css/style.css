@@ -184,18 +184,16 @@ header {
 
 /* ===== Navigation ===== */
 .navbar {
-    background-color: var(--greek-flag-blue) !important;
-    padding: 1rem 0;
-    border-bottom: 4px solid var(--accent-blue); /* Adds that accent line from the mockup */
+    background-color: var(--greek-flag-blue) !important; /* #185FAA */
+    border-bottom: none;
 }
 
 .nav-link {
     font-family: 'Lithos', sans-serif;
-    color: #FFFFFF !important;
     text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    margin: 0 15px;
+    color: #FFFFFF !important;
+    font-size: 0.95rem;
+    letter-spacing: 1.5px;
 }
 
 .nav-link:hover {
@@ -240,15 +238,29 @@ header {
 }
 
 .main-title {
-    margin-bottom: -10px; /* Tightens the gap between Holy Trinity and Fort Wayne */
+    font-family: 'Insignia', sans-serif; /* Use Insignia here */
+    color: var(--text-navy); /* #034488 */
+    font-size: 5.5rem;
+    line-height: 0.8;
+    margin-bottom: 5px;
+}
+
+.main-title .location {
+    font-size: 3rem;
 }
 
 .sub-title {
+    font-family: 'Lithos', sans-serif; /* Use Lithos here */
+    color: var(--text-navy);
+    font-size: 3.5rem;
+    margin-top: 0;
+}
+
+.festival-date {
+    color: var(--accent-blue); /* #178FD6 - replacing the red */
     font-family: 'Lithos', sans-serif;
-    font-weight: 900; /* Use the boldest version of Lithos */
-    font-size: 3rem;
-    letter-spacing: -1px;
-    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 2.2rem;
 }
 
 /* The horizontal lines around the tagline */
