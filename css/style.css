@@ -919,15 +919,7 @@ body.show-prices .food-info strong {
     line-height: 1.5;
 }
 
-.social-icon {
-    width: 1.2rem;
-    text-align: center;
-}
 
-.social-placeholder {
-    color: var(--text-light);
-    font-style: italic;
-}
 
 .contact-item a {
     color: var(--primary-color);
