@@ -156,19 +156,21 @@ header {
 }
 
 .hero-kicker {
+    font-family: 'Insignia', 'Times New Roman', serif;
     color: var(--title-dark);
     font-weight: 700;
     font-size: clamp(2.4rem, 4.7vw, 3.8rem);
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     line-height: 1;
     margin-bottom: 2px;
 }
 
 .hero-title {
+    font-family: 'Insignia', 'Times New Roman', serif;
     font-size: clamp(2.2rem, 5.2vw, 4.9rem);
     color: var(--title-dark);
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     line-height: 0.95;
@@ -179,7 +181,7 @@ header {
 }
 
 .hero-title-annual {
-    font-size: clamp(2.2rem, 4.8vw, 4.4rem);
+    font-size: clamp(2.2rem, 4.6vw, 4rem);
 }
 
 .hero-title-festival {
@@ -188,12 +190,13 @@ header {
 }
 
 .hero-tagline {
+    font-family: 'Lithos', 'Trebuchet MS', sans-serif;
     font-size: 1.12rem;
     color: var(--primary-color);
     margin: 0 auto 10px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    max-width: 920px;
+    max-width: 980px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -327,6 +330,15 @@ header {
     border-left: 3px solid var(--accent-color);
     border-radius: 6px;
     box-shadow: var(--shadow);
+}
+
+
+.parish-logo {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    display: block;
+    margin: 0 auto 14px;
 }
 
 .info-box h3 {
