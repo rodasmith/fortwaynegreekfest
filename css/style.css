@@ -150,6 +150,68 @@ header {
     text-align: center;
     border-bottom: 1px solid #d7d5cf;
 }
+.hero-content {
+    text-align: center; /* Mockup shows centered text */
+    padding: 40px 0;
+}
+
+.hero-kicker {
+    font-family: 'Insignia', 'Times New Roman', serif;
+    color: var(--title-dark);
+    font-weight: 700;
+    font-size: clamp(2.4rem, 4.7vw, 3.8rem);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+.hero-title {
+    font-family: 'Insignia', 'Times New Roman', serif;
+    font-size: clamp(2.2rem, 5.2vw, 4.9rem);
+    color: var(--title-dark);
+    margin-bottom: 8px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 0.95;
+}
+
+.hero-title-line {
+    display: block;
+}
+
+.hero-title-annual {
+    font-size: clamp(2.2rem, 4.6vw, 4rem);
+}
+
+.hero-title-festival {
+    font-size: clamp(2.6rem, 5.7vw, 5.5rem);
+    letter-spacing: 0.05em;
+}
+
+.hero-tagline {
+    font-family: 'Lithos', 'Trebuchet MS', sans-serif;
+    font-size: 1.12rem;
+    color: var(--primary-color);
+    margin: 0 auto 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    max-width: 980px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.hero-tagline::before,
+.hero-tagline::after {
+    content: "";
+    width: 80px;
+    height: 1px;
+    background: var(--accent-blue);
+    max-width: 100px;
+    margin: 0 20px;
+}
 
 .hero-kicker {
     font-family: 'Insignia', 'Times New Roman', serif;
