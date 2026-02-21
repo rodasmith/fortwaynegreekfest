@@ -270,6 +270,15 @@ header {
     box-shadow: var(--shadow);
 }
 
+
+.parish-logo {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    display: block;
+    margin: 0 auto 14px;
+}
+
 .info-box h3 {
     color: var(--primary-color);
     margin-bottom: 15px;
