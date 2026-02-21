@@ -519,7 +519,7 @@ header {
 }
 
 .performance-schedule li:before {
-    content: "\1F3AD";
+    content: "\01f1ec\01f1f7"; /* Greek flag emoji */
     position: absolute;
     left: 0;
 }
