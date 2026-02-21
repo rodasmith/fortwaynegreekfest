@@ -512,16 +512,21 @@ header {
 }
 
 .performance-schedule li {
-    color: var(--text-dark);
     margin-bottom: 12px;
     padding-left: 25px;
     position: relative;
 }
 
 .performance-schedule li:before {
-    content: "\01f1ec\01f1f7"; /* Greek flag emoji */
+    content: "";
     position: absolute;
     left: 0;
+    top: 0.35em;             /* vertically centers the icon */
+    width: 20px;             /* adjust to your PNG size */
+    height: 20px;
+    background-image: url('../images/Greek_flag.png');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 /* ===== Food Section ===== */
