@@ -973,6 +973,11 @@ body.show-prices .food-info strong {
     line-height: 1.7;
 }
 
+.social-links-block {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
 .social-links-list {
     list-style: none;
     padding: 0;
