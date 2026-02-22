@@ -180,6 +180,10 @@ header {
     display: block;
 }
 
+.hero-title-ordinal-indicator {
+    font-size: 50%;
+}
+
 .hero-title-annual {
     font-size: clamp(2.2rem, 4.6vw, 4rem);
 }
