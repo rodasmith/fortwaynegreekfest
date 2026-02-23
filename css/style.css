@@ -992,20 +992,24 @@ body.show-prices .food-info strong {
 }
 
 .social-links-block {
-    max-width: 300px;
+    --social-links-align: left;
+    max-width: 360px;
     margin: 0 auto;
 }
 
-.social-links-block p {
-    max-width: 75%;
-    margin-left: auto;
+.social-links-block--center {
+    --social-links-align: center;
+}
+
+.social-links-block--right {
+    margin-right: 0;
 }
 
 .social-links-list {
     list-style: none;
     padding: 0;
     margin: 0 0 14px;
-    text-align: left;
+    text-align: var(--social-links-align);
 }
 
 .social-links-list li {
@@ -1015,6 +1019,10 @@ body.show-prices .food-info strong {
     flex-wrap: wrap;
     margin-bottom: 8px;
     line-height: 1.5;
+}
+
+.social-links-list--icons-only li {
+    flex-wrap: nowrap;
 }
 
 
