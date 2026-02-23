@@ -812,6 +812,13 @@ body.show-prices .food-info strong {
     font-size: 1.1rem;
 }
 
+.social-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
 .social-link {
     margin-top: 1rem;
     font-size: 1rem;
@@ -985,26 +992,60 @@ body.show-prices .food-info strong {
 }
 
 .social-links-block {
-    max-width: 300px;
+    --social-links-align: left;
+    width: fit-content;
+    max-width: 100%;
     margin: 0 auto;
 }
 
+.social-links-block--center {
+    --social-links-align: center;
+}
+
+.social-links-block--right {
+    margin-left: auto;
+    margin-right: 0;
+}
+
 .social-links-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     list-style: none;
     padding: 0;
     margin: 0 0 14px;
-    text-align: left;
+    text-align: var(--social-links-align);
 }
 
 .social-links-list li {
     display: flex;
-    align-items: center;
     gap: 8px;
     flex-wrap: wrap;
     margin-bottom: 8px;
     line-height: 1.5;
 }
 
+.social-links-list--icons-only li {
+    flex-wrap: nowrap;
+}
+
+.social-links-list--icons-only li {
+    flex-wrap: nowrap;
+}
+
+@media (min-width: 950px) {
+    .social-links-list--two-columns-desktop {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        column-gap: 22px;
+        row-gap: 8px;
+        justify-content: end;
+    }
+
+    .social-links-list--two-columns-desktop li {
+        margin-bottom: 0;
+    }
+}
 
 .contact-item a {
     color: var(--primary-color);
