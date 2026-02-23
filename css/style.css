@@ -791,12 +791,19 @@ body.show-prices .food-info strong {
     margin: 1.5rem 0;
     padding: 1.5rem;
     background-color: rgba(240, 240, 240, 0.55);
-    background-image: url('../images/triada_young_dancer.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right center;
     background-blend-mode: soft-light;
     border-radius: 6px;
+}
+
+.triada-dancers .performance-info {
+    background-image: url('../images/dancer.jpeg');
+}
+
+.live-music .performance-info {
+    background-image: url('../images/Lee-Lazarus\ Band-Verticle.jpg');
 }
 
 .performance-info h4 {
