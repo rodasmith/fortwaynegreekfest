@@ -993,7 +993,8 @@ body.show-prices .food-info strong {
 
 .social-links-block {
     --social-links-align: left;
-    max-width: 360px;
+    width: fit-content;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -1002,14 +1003,22 @@ body.show-prices .food-info strong {
 }
 
 .social-links-block--right {
+    margin-left: auto;
     margin-right: 0;
 }
 
 .social-links-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     list-style: none;
     padding: 0;
     margin: 0 0 14px;
     text-align: var(--social-links-align);
+}
+
+.social-links-block--center .social-links-list {
+    align-items: center;
 }
 
 .social-links-list li {
