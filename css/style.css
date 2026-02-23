@@ -812,6 +812,13 @@ body.show-prices .food-info strong {
     font-size: 1.1rem;
 }
 
+.social-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
 .social-link {
     margin-top: 1rem;
     font-size: 1rem;
@@ -987,6 +994,11 @@ body.show-prices .food-info strong {
 .social-links-block {
     max-width: 300px;
     margin: 0 auto;
+}
+
+.social-links-block p {
+    max-width: 75%;
+    margin-left: auto;
 }
 
 .social-links-list {
