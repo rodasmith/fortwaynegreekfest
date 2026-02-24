@@ -1034,6 +1034,23 @@ body.show-prices .food-info strong {
     flex-wrap: nowrap;
 }
 
+.social-links-list--icons-only li {
+    flex-wrap: nowrap;
+}
+
+@media (min-width: 950px) {
+    .social-links-list--two-columns-desktop {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        column-gap: 22px;
+        row-gap: 8px;
+        justify-content: end;
+    }
+
+    .social-links-list--two-columns-desktop li {
+        margin-bottom: 0;
+    }
+}
 
 .contact-item a {
     color: var(--primary-color);
