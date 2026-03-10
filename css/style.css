@@ -861,68 +861,149 @@ body.show-prices .food-info strong {
     background-color: var(--secondary-color);
 }
 
-.sponsors h2 {
+.sponsors-heading-main {
     text-align: center;
     color: var(--primary-color);
-    font-size: 2.2em;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+}
+
+.sponsors-heading-sub {
+    text-align: center;
+    color: #4a87be;
+    font-size: clamp(1.2rem, 2.4vw, 1.7rem);
+    letter-spacing: 0.12em;
     margin-bottom: 15px;
 }
 
-
-.sponsor-tier {
-    margin-top: 32px;
+.sponsors-content {
+    display: grid;
+    gap: 24px;
 }
 
-.sponsor-tier-title {
-    text-align: center;
-    color: var(--primary-color);
-    margin-bottom: 14px;
-    font-size: 1.4em;
+.sponsor-top-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
 }
 
-.sponsor-tier-placeholder {
-    margin: 0;
-    color: #666;
-    font-size: 1.05em;
-}
-
-.sponsor-logos-cloud {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    margin-top: 40px;
-    background-color: var(--light-blue);
-    padding: 40px 20px;
-    border-radius: 8px;
+.sponsor-card {
+    background: #fff;
+    border-radius: 14px;
     box-shadow: var(--shadow);
+    padding: 24px;
 }
 
-.sponsor-logo {
+.sponsor-card h4 {
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.sponsor-logo-grid {
+    display: grid;
+    gap: 12px;
+}
+
+.sponsor-logo-grid--band {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.sponsor-logo-grid--menu {
+    grid-template-columns: 1fr;
+}
+
+.sponsor-logo-slot {
+    min-height: 72px;
+    border: 2px dashed #9db8d2;
+    background: #f4f8fc;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100px;
+    color: #6d8194;
+    font-size: 0.95rem;
 }
 
-.sponsor-image {
-    width: 120px;
-    height: 80px;
-    object-fit: contain;
-    transition: transform 0.3s ease, filter 0.3s ease;
+.sponsor-logo-slot--feature {
+    min-height: 130px;
 }
 
-.sponsor-logo:hover .sponsor-image {
-    transform: scale(1.1);
-    filter: brightness(1.1);
+.sponsor-card--business .business-sponsor-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 16px;
+}
+
+.business-composite-logo {
+    min-height: 220px;
+    border-radius: 10px;
+    border: 2px dashed #9db8d2;
+    background: #f4f8fc;
+    color: #6d8194;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.business-individual-logos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.sponsor-card--friends {
+    padding: 28px;
+}
+
+.festival-level {
+    margin-top: 18px;
+}
+
+.festival-level-ribbon {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 999px;
+    padding: 10px 16px;
+    margin-bottom: 12px;
+}
+
+.festival-level-ribbon--platinum { background: linear-gradient(90deg, #9ea5ab, #c8d1d8); }
+.festival-level-ribbon--gold { background: linear-gradient(90deg, #be8b18, #dbb856); }
+.festival-level-ribbon--silver { background: linear-gradient(90deg, #8b98a5, #bec8d2); }
+.festival-level-ribbon--bronze { background: linear-gradient(90deg, #a5653b, #cb8a5f); }
+
+.festival-level-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    gap: 12px;
+    align-items: center;
+}
+
+.festival-level-logos-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.festival-level-names {
+    font-family: 'Lithos', 'Trebuchet MS', sans-serif;
+    color: var(--primary-color);
+    text-align: center;
+    margin: 0;
+    line-height: 1.5;
 }
 
 .sponsor-contact-message {
     text-align: center;
-    margin-top: 30px;
-    padding-top: 30px;
-    border-top: 2px solid var(--border-light);
+    margin-top: 8px;
+    padding-top: 8px;
 }
 
 .sponsor-contact-message p {
@@ -937,35 +1018,18 @@ body.show-prices .food-info strong {
     font-weight: 600;
 }
 
-.sponsor-contact-message a:hover {
-    color: var(--accent-color);
-    text-decoration: underline;
+.donate-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff !important;
+    border-radius: 999px;
+    padding: 10px 22px;
+    letter-spacing: 0.04em;
 }
 
-.no-sponsors-message {
-    text-align: center;
-    margin-top: 40px;
-    padding: 40px;
-    background-color: var(--light-blue);
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-}
-
-.no-sponsors-message p {
-    color: var(--text-dark);
-    font-size: 1.05em;
-    margin-bottom: 15px;
-}
-
-.no-sponsors-message a {
-    color: var(--primary-color);
+.donate-button:hover {
+    background-color: #0b4f94;
     text-decoration: none;
-    font-weight: 600;
-}
-
-.no-sponsors-message a:hover {
-    text-decoration: underline;
-    color: var(--accent-color);
 }
 
 /* ===== Contact Section ===== */
@@ -1166,17 +1230,20 @@ footer a:hover {
     }
 
 
-    .sponsor-logos-cloud {
-        gap: 20px;
+    .sponsor-top-grid {
+        grid-template-columns: 1fr;
     }
 
-    .sponsor-logo {
-        height: 80px;
+    .sponsor-card--business .business-sponsor-layout {
+        grid-template-columns: 1fr;
     }
 
-    .sponsor-image {
-        max-width: 120px;
-        max-height: 80px;
+    .festival-level-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .festival-level-logos-two {
+        grid-template-columns: 1fr 1fr;
     }
 
     .contact-grid {
