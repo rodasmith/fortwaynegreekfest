@@ -868,6 +868,24 @@ body.show-prices .food-info strong {
     margin-bottom: 15px;
 }
 
+
+.sponsor-tier {
+    margin-top: 32px;
+}
+
+.sponsor-tier-title {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 14px;
+    font-size: 1.4em;
+}
+
+.sponsor-tier-placeholder {
+    margin: 0;
+    color: #666;
+    font-size: 1.05em;
+}
+
 .sponsor-logos-cloud {
     display: flex;
     flex-wrap: wrap;
@@ -1146,6 +1164,7 @@ footer a:hover {
     .entertainment-content {
         grid-template-columns: 1fr;
     }
+
 
     .sponsor-logos-cloud {
         gap: 20px;
