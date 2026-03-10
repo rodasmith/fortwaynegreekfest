@@ -963,21 +963,12 @@ body.show-prices .food-info strong {
     margin-top: 18px;
 }
 
-.festival-level-ribbon {
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: white;
-    font-weight: 700;
-    text-align: center;
-    border-radius: 999px;
-    padding: 10px 16px;
-    margin-bottom: 12px;
+.festival-level-ribbon-image {
+    display: block;
+    width: min(100%, 540px);
+    margin: 0 auto 12px;
+    height: auto;
 }
-
-.festival-level-ribbon--platinum { background: linear-gradient(90deg, #9ea5ab, #c8d1d8); }
-.festival-level-ribbon--gold { background: linear-gradient(90deg, #be8b18, #dbb856); }
-.festival-level-ribbon--silver { background: linear-gradient(90deg, #8b98a5, #bec8d2); }
-.festival-level-ribbon--bronze { background: linear-gradient(90deg, #a5653b, #cb8a5f); }
 
 .festival-level-grid {
     display: grid;
