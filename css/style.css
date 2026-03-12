@@ -928,6 +928,22 @@ body.show-prices .food-info strong {
     font-size: 0.95rem;
 }
 
+.sponsor-logo-slot--image {
+    min-height: 140px;
+    padding: 14px;
+    border: none;
+    background: #fff;
+}
+
+.sponsor-logo-image {
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    max-height: 96px;
+    height: auto;
+    object-fit: contain;
+}
+
 .sponsor-logo-slot--feature {
     min-height: 130px;
 }
