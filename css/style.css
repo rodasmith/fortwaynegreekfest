@@ -865,6 +865,7 @@ body.show-prices .food-info strong {
     text-align: center;
     color: var(--primary-color);
     font-size: clamp(2.2rem, 4vw, 3rem);
+    font-family: 'Lithos', 'Trebuchet MS', sans-serif;
     letter-spacing: 0.08em;
     margin-bottom: 4px;
 }
@@ -873,6 +874,7 @@ body.show-prices .food-info strong {
     text-align: center;
     color: #4a87be;
     font-size: clamp(1.2rem, 2.4vw, 1.7rem);
+    font-family: 'Lithos', 'Trebuchet MS', sans-serif;
     letter-spacing: 0.12em;
     margin-bottom: 15px;
 }
@@ -946,6 +948,11 @@ body.show-prices .food-info strong {
 
 .sponsor-logo-slot--feature {
     min-height: 130px;
+}
+
+.sponsor-logo-slot--feature .sponsor-logo-image {
+    max-width: 420px;
+    max-height: 180px;
 }
 
 .sponsor-card--business .business-sponsor-layout {
