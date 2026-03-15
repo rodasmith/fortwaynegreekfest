@@ -1154,13 +1154,48 @@ body.show-prices .food-info strong {
     text-decoration: underline;
 }
 
-.map-placeholder {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #004BAE 100%);
-    color: var(--secondary-color);
-    padding: 40px;
+.parking-map-card {
+    background-color: #f7f7f7;
+    padding: 30px;
     border-radius: 8px;
+    box-shadow: var(--shadow);
     text-align: center;
-    font-size: 1.2em;
+}
+
+.parking-map-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 12px;
+    font-size: 1.25em;
+}
+
+.parking-map-card p {
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.parking-map-card a {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.parking-map-card a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.parking-map-embed {
+    margin-top: 14px;
+    border: 1px solid #d6d6d6;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.parking-map-embed iframe {
+    width: 100%;
+    min-height: 520px;
+    border: 0;
 }
 
 /* ===== Footer ===== */
@@ -1262,6 +1297,10 @@ footer a:hover {
 
     .contact-grid {
         grid-template-columns: 1fr;
+    }
+
+    .parking-map-embed iframe {
+        min-height: 420px;
     }
 }
 
