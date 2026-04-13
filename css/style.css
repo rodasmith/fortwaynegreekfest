@@ -940,6 +940,20 @@ header {
     object-fit: contain;
 }
 
+.sponsor-logo-fallback {
+    display: none;
+    text-align: center;
+}
+
+.sponsor-logo-slot--missing {
+    border: 2px dashed #9db8d2;
+    background: #f4f8fc;
+}
+
+.sponsor-logo-slot--missing .sponsor-logo-fallback {
+    display: block;
+}
+
 .sponsor-logo-slot--feature {
     min-height: 130px;
 }
