@@ -316,9 +316,13 @@ header {
 
 .about-content {
     display: grid;
-    grid-template-columns: minmax(0, 3fr) minmax(280px, 1fr);
-    gap: 40px;
+    grid-template-columns: minmax(0, 2.15fr) minmax(360px, 1.15fr);
+    gap: 32px;
     align-items: start;
+}
+
+.about-text {
+    max-width: 62ch;
 }
 
 .about-text p {
@@ -336,13 +340,21 @@ header {
     box-shadow: var(--shadow);
 }
 
+.about-sidebar {
+    min-width: 0;
+}
 
 .parish-logo {
     width: 100%;
-    max-width: 340px;
+    max-width: 380px;
     height: auto;
     display: block;
     margin: 0 auto 14px;
+}
+
+.parish-logo--about {
+    max-width: 420px;
+    margin-bottom: 10px;
 }
 
 .info-box h3 {
@@ -355,6 +367,17 @@ header {
     color: var(--text-dark);
     margin-bottom: 12px;
     line-height: 1.7;
+}
+
+.info-box-contact-row {
+    display: grid;
+    grid-template-columns: minmax(120px, 0.95fr) minmax(170px, 1.2fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.info-box-contact-row p {
+    margin-bottom: 0;
 }
 
 .info-box a {
@@ -406,6 +429,19 @@ header {
 
     .about-content {
         grid-template-columns: 1fr;
+    }
+
+    .about-text {
+        max-width: none;
+    }
+
+    .parish-logo--about {
+        max-width: 340px;
+    }
+
+    .info-box-contact-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
     }
 }
 
