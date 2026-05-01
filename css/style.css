@@ -1000,13 +1000,17 @@ header {
 }
 
 .sponsor-card--business .business-sponsor-layout {
+    --business-logo-row-height: 96px;
+    --business-logo-gap: 12px;
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 16px;
+    grid-template-columns: minmax(300px, 0.92fr) minmax(0, 1.55fr);
+    gap: var(--business-logo-gap);
+    align-items: start;
 }
 
 .business-composite-logo {
-    min-height: 220px;
+    min-height: 0;
+    height: calc((var(--business-logo-row-height) * 2) + var(--business-logo-gap));
     border-radius: 10px;
     border: none;
     background: #fff;
@@ -1033,9 +1037,39 @@ header {
 }
 
 .business-individual-logos {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: var(--business-logo-gap);
+}
+
+.business-individual-logos .sponsor-logo-slot--image {
+    flex: 0 1 auto;
+    min-height: 0;
+    min-width: 120px;
+    max-width: 300px;
+    padding: 6px;
+}
+
+.business-individual-logos .sponsor-logo-image {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    max-height: none;
+    object-fit: contain;
+}
+
+.business-individual-logos .sponsor-logo-slot--missing {
+    flex-basis: 160px;
+}
+
+.business-individual-logos .sponsor-logo-slot--missing,
+.business-individual-logos .sponsor-logo-slot--image {
+    height: var(--business-logo-row-height);
+}
+
+.business-individual-logos .sponsor-logo-slot--missing .sponsor-logo-fallback {
+    width: 100%;
 }
 
 .sponsor-card--friends {
@@ -1344,7 +1378,12 @@ footer a:hover {
     }
 
     .sponsor-card--business .business-sponsor-layout {
+        --business-logo-row-height: 84px;
         grid-template-columns: 1fr;
+    }
+
+    .business-individual-logos {
+        justify-content: center;
     }
 
     .festival-level-grid {
