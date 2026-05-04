@@ -1059,6 +1059,11 @@ header {
     object-fit: contain;
 }
 
+.business-individual-logos .sponsor-logo-slot--wide {
+    flex-basis: 320px;
+    max-width: 360px;
+}
+
 .business-individual-logos .sponsor-logo-slot--missing {
     flex-basis: 160px;
 }
