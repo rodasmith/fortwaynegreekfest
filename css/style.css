@@ -1013,7 +1013,7 @@ header {
     flex: 0 1 auto;
     min-height: 0;
     min-width: 120px;
-    max-width: 300px;
+    max-width: 155px;
     padding: 6px;
 }
 
@@ -1023,11 +1023,6 @@ header {
     max-width: 100%;
     max-height: none;
     object-fit: contain;
-}
-
-.business-individual-logos .sponsor-logo-slot--wide {
-    flex-basis: 320px;
-    max-width: 360px;
 }
 
 .business-individual-logos .sponsor-logo-slot--missing {
