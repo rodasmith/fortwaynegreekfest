@@ -999,21 +999,35 @@ header {
     max-height: 180px;
 }
 
+.sponsor-logo-size--business {
+    --sponsor-logo-row-height: 96px;
+    --sponsor-logo-min-width: 120px;
+    --sponsor-logo-max-width: 155px;
+    --sponsor-logo-gap: 12px;
+    --sponsor-logo-missing-width: 160px;
+}
+
+.sponsor-logo-size--silver {
+    --sponsor-logo-row-height: 72px;
+    --sponsor-logo-min-width: 92px;
+    --sponsor-logo-max-width: 116px;
+    --sponsor-logo-gap: 10px;
+    --sponsor-logo-missing-width: 120px;
+}
+
 .sponsor-card--business .business-individual-logos {
-    --business-logo-row-height: 96px;
-    --business-logo-gap: 12px;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: center;
-    gap: var(--business-logo-gap);
+    gap: var(--sponsor-logo-gap);
 }
 
 .business-individual-logos .sponsor-logo-slot--image {
     flex: 0 1 auto;
     min-height: 0;
-    min-width: 120px;
-    max-width: 155px;
+    min-width: var(--sponsor-logo-min-width);
+    max-width: var(--sponsor-logo-max-width);
     padding: 6px;
 }
 
@@ -1026,12 +1040,12 @@ header {
 }
 
 .business-individual-logos .sponsor-logo-slot--missing {
-    flex-basis: 160px;
+    flex-basis: var(--sponsor-logo-missing-width);
 }
 
 .business-individual-logos .sponsor-logo-slot--missing,
 .business-individual-logos .sponsor-logo-slot--image {
-    height: var(--business-logo-row-height);
+    height: var(--sponsor-logo-row-height);
 }
 
 .business-individual-logos .sponsor-logo-slot--missing .sponsor-logo-fallback {
@@ -1058,6 +1072,47 @@ header {
     grid-template-columns: 1fr 1.2fr 1fr;
     gap: 12px;
     align-items: center;
+}
+
+.festival-level-grid--silver {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.festival-level-logo-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--sponsor-logo-gap);
+}
+
+.festival-level-grid--silver .festival-level-logo-list {
+    grid-column: 1 / -1;
+}
+
+.festival-level-logo-list .sponsor-logo-slot--image {
+    flex: 0 1 auto;
+    min-height: 0;
+    min-width: var(--sponsor-logo-min-width);
+    max-width: var(--sponsor-logo-max-width);
+    height: var(--sponsor-logo-row-height);
+    padding: 6px;
+}
+
+.festival-level-logo-list .sponsor-logo-image {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    max-height: none;
+    object-fit: contain;
+}
+
+.festival-level-logo-list .sponsor-logo-slot--missing {
+    flex-basis: var(--sponsor-logo-missing-width);
+    height: var(--sponsor-logo-row-height);
+}
+
+.festival-level-logo-list .sponsor-logo-slot--missing .sponsor-logo-fallback {
+    width: 100%;
 }
 
 .festival-level-logos-two {
@@ -1343,8 +1398,16 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 
-    .sponsor-card--business .business-individual-logos {
-        --business-logo-row-height: 84px;
+    .sponsor-logo-size--business {
+        --sponsor-logo-row-height: 84px;
+        --sponsor-logo-min-width: 104px;
+        --sponsor-logo-max-width: 136px;
+    }
+
+    .sponsor-logo-size--silver {
+        --sponsor-logo-row-height: 64px;
+        --sponsor-logo-min-width: 82px;
+        --sponsor-logo-max-width: 104px;
     }
 
     .festival-level-grid {
