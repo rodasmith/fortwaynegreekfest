@@ -941,11 +941,30 @@ header {
 }
 
 .sponsor-logo-grid--band {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    --sponsor-logo-row-height: 96px;
+    --sponsor-logo-min-width: 120px;
+    --sponsor-logo-max-width: 220px;
+    --sponsor-logo-gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--sponsor-logo-gap);
 }
 
 .sponsor-logo-grid--menu {
     grid-template-columns: 1fr;
+}
+
+.sponsor-logo-grid--menu .sponsor-logo-slot--image {
+    min-height: 96px;
+    padding: 6px;
+}
+
+.sponsor-logo-grid--menu .sponsor-logo-image {
+    width: auto;
+    height: 96px;
+    max-width: 100%;
+    max-height: none;
 }
 
 .sponsor-logo-slot {
@@ -1023,6 +1042,7 @@ header {
     gap: var(--sponsor-logo-gap);
 }
 
+.sponsor-logo-grid--band .sponsor-logo-slot--image,
 .business-individual-logos .sponsor-logo-slot--image {
     flex: 0 1 auto;
     min-height: 0;
@@ -1031,6 +1051,7 @@ header {
     padding: 6px;
 }
 
+.sponsor-logo-grid--band .sponsor-logo-image,
 .business-individual-logos .sponsor-logo-image {
     width: auto;
     height: 100%;
@@ -1043,6 +1064,7 @@ header {
     flex-basis: var(--sponsor-logo-missing-width);
 }
 
+.sponsor-logo-grid--band .sponsor-logo-slot--image,
 .business-individual-logos .sponsor-logo-slot--missing,
 .business-individual-logos .sponsor-logo-slot--image {
     height: var(--sponsor-logo-row-height);
