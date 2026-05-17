@@ -1146,12 +1146,25 @@ header {
     gap: 10px;
 }
 
-.festival-level-names {
+.festival-level-names,
+.festival-level-names-list {
     font-family: 'Lithos', 'Trebuchet MS', sans-serif;
     color: var(--primary-color);
     text-align: center;
     margin: 0;
     line-height: 1.5;
+}
+
+.festival-level-names-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 4px 18px;
+    list-style: none;
+    padding: 0;
+}
+
+.festival-level-grid--silver .festival-level-names-list {
+    grid-column: 1 / -1;
 }
 
 .sponsor-contact-message {
