@@ -959,9 +959,9 @@ header {
 }
 
 .sponsor-logo-grid--menu .sponsor-logo-slot--image {
-    width: 155px;
-    min-height: 96px;
-    height: 96px;
+    width: 220px;
+    min-height: 136px;
+    height: 136px;
     padding: 6px;
     margin: 0 auto;
 }
@@ -1026,8 +1026,8 @@ header {
 }
 
 .sponsor-logo-size--business {
-    --sponsor-logo-row-height: 96px;
-    --sponsor-logo-box-width: 155px;
+    --sponsor-logo-row-height: 136px;
+    --sponsor-logo-box-width: 220px;
     --sponsor-logo-gap: 12px;
     --sponsor-logo-missing-width: 160px;
 }
@@ -1447,8 +1447,8 @@ footer a:hover {
     }
 
     .sponsor-logo-size--business {
-        --sponsor-logo-row-height: 84px;
-        --sponsor-logo-box-width: 136px;
+        --sponsor-logo-row-height: 136px;
+        --sponsor-logo-box-width: 220px;
     }
 
     .sponsor-logo-size--silver {
