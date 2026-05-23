@@ -1032,6 +1032,13 @@ header {
     --sponsor-logo-missing-width: 160px;
 }
 
+.sponsor-logo-size--gold {
+    --sponsor-logo-row-height: 104px;
+    --sponsor-logo-box-width: 168px;
+    --sponsor-logo-gap: 12px;
+    --sponsor-logo-missing-width: 150px;
+}
+
 .sponsor-logo-size--silver {
     --sponsor-logo-row-height: 72px;
     --sponsor-logo-box-width: 116px;
