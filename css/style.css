@@ -1463,6 +1463,11 @@ footer a:hover {
         --sponsor-logo-box-width: 104px;
     }
 
+    .sponsor-logo-size--gold {
+        --sponsor-logo-row-height: 64px;
+        --sponsor-logo-box-width: 104px;
+    }
+
     .festival-level-grid {
         grid-template-columns: 1fr;
     }
