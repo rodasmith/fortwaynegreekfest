@@ -1090,67 +1090,14 @@ header {
 }
 
 .festival-level {
-    margin-top: 18px;
+    margin-top: 14px;
 }
 
 .festival-level-ribbon-image {
     display: block;
     width: min(100%, 540px);
-    margin: 0 auto 12px;
+    margin: 0 auto;
     height: auto;
-}
-
-.festival-level-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr 1fr;
-    gap: 12px;
-    align-items: center;
-}
-
-.festival-level-grid--silver {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.festival-level-logo-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--sponsor-logo-gap);
-}
-
-.festival-level-grid--silver .festival-level-logo-list {
-    grid-column: 1 / -1;
-}
-
-.festival-level-logo-list .sponsor-logo-slot--image {
-    flex: 0 1 auto;
-    min-height: 0;
-    width: var(--sponsor-logo-box-width);
-    height: var(--sponsor-logo-row-height);
-    padding: 6px;
-}
-
-.festival-level-logo-list .sponsor-logo-image {
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    max-height: none;
-    object-fit: contain;
-}
-
-.festival-level-logo-list .sponsor-logo-slot--missing {
-    flex-basis: var(--sponsor-logo-missing-width);
-    height: var(--sponsor-logo-row-height);
-}
-
-.festival-level-logo-list .sponsor-logo-slot--missing .sponsor-logo-fallback {
-    width: 100%;
-}
-
-.festival-level-logos-two {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
 }
 
 .festival-level-names,
@@ -1163,15 +1110,42 @@ header {
 }
 
 .festival-level-names-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 4px 18px;
     list-style: none;
     padding: 0;
 }
 
-.festival-level-grid--silver .festival-level-names-list {
-    grid-column: 1 / -1;
+.festival-level-names-list > li:not(.festival-level-logo-item) {
+    flex: 1 1 150px;
+}
+
+.festival-level-logo-item.sponsor-logo-slot--image {
+    flex: 0 1 auto;
+    min-height: 0;
+    width: var(--sponsor-logo-box-width);
+    height: 2.2em;
+    padding: 0;
+}
+
+.festival-level-logo-item .sponsor-logo-image {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: none;
+    object-fit: contain;
+}
+
+.festival-level-logo-item.sponsor-logo-slot--missing {
+    flex-basis: var(--sponsor-logo-missing-width);
+    height: 2.2em;
+}
+
+.festival-level-logo-item.sponsor-logo-slot--missing .sponsor-logo-fallback {
+    width: 100%;
 }
 
 .sponsor-contact-message {
@@ -1466,14 +1440,6 @@ footer a:hover {
     .sponsor-logo-size--gold {
         --sponsor-logo-row-height: 64px;
         --sponsor-logo-box-width: 104px;
-    }
-
-    .festival-level-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .festival-level-logos-two {
-        grid-template-columns: 1fr 1fr;
     }
 
     .contact-grid {
