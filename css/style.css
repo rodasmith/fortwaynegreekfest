@@ -1032,18 +1032,25 @@ header {
     --sponsor-logo-missing-width: 160px;
 }
 
+.sponsor-logo-size--platinum {
+    --sponsor-logo-row-height: 2.2em;
+    --sponsor-logo-box-width: 168px;
+    --sponsor-logo-gap: 12px;
+    --sponsor-logo-missing-width: 150px;
+}
+
 .sponsor-logo-size--gold {
-    --sponsor-logo-row-height: 104px;
+    --sponsor-logo-row-height: 2.2em;
     --sponsor-logo-box-width: 168px;
     --sponsor-logo-gap: 12px;
     --sponsor-logo-missing-width: 150px;
 }
 
 .sponsor-logo-size--silver {
-    --sponsor-logo-row-height: 72px;
-    --sponsor-logo-box-width: 116px;
-    --sponsor-logo-gap: 10px;
-    --sponsor-logo-missing-width: 120px;
+    --sponsor-logo-row-height: 2.2em;
+    --sponsor-logo-box-width: 168px;
+    --sponsor-logo-gap: 12px;
+    --sponsor-logo-missing-width: 150px;
 }
 
 .sponsor-card--business .business-individual-logos {
@@ -1127,7 +1134,7 @@ header {
     flex: 0 1 auto;
     min-height: 0;
     width: var(--sponsor-logo-box-width);
-    height: 2.2em;
+    height: var(--sponsor-logo-row-height);
     padding: 0;
 }
 
@@ -1141,7 +1148,7 @@ header {
 
 .festival-level-logo-item.sponsor-logo-slot--missing {
     flex-basis: var(--sponsor-logo-missing-width);
-    height: 2.2em;
+    height: var(--sponsor-logo-row-height);
 }
 
 .festival-level-logo-item.sponsor-logo-slot--missing .sponsor-logo-fallback {
@@ -1432,13 +1439,15 @@ footer a:hover {
         --sponsor-logo-box-width: 220px;
     }
 
+    .sponsor-logo-size--platinum {
+        --sponsor-logo-box-width: 104px;
+    }
+
     .sponsor-logo-size--silver {
-        --sponsor-logo-row-height: 64px;
         --sponsor-logo-box-width: 104px;
     }
 
     .sponsor-logo-size--gold {
-        --sponsor-logo-row-height: 64px;
         --sponsor-logo-box-width: 104px;
     }
 
